@@ -1,3 +1,12 @@
+const title=document.getElementById("#Title")
+const author=document.getElementById("#author")
+const page=document.getElementById("#page")
+const read=document.getElementById("#check")
+const button=document.getElementById("#add")
+
+
+
+
 let myLibrary=[]
 
 function Book(title,author,pages,read){
@@ -6,8 +15,8 @@ function Book(title,author,pages,read){
     this.author=author
     this.pages=pages
     this.read=read
-
     
+
 
 }
 Book.prototype.addBook=function(){
@@ -24,10 +33,23 @@ function addBookToLibrary(title){
     this.pages=100
     this.read="Not yet red"
 
+    for (let key in Book){
+        myLibrary.push(Book[key])
+        console.log(myLibrary.push(Book[key]))
+    }
+    
+    
+    
+
    
 
 }
 addBookToLibrary.prototype.addBook=function(){
+    for (let key in Book){
+        myLibrary.push(Book[key])
+        console.log(myLibrary.push(Book[key]))
+    }
+    
     console.log("js")
 }
 addBookToLibrary.prototype=Object.create(Book.prototype)
@@ -35,6 +57,5 @@ addBookToLibrary.prototype=Object.create(Book.prototype)
 const book=new addBookToLibrary("js")
 book.addBook()
 
-console.log(myLibrary.push(addBookToLibrary))
 
 
