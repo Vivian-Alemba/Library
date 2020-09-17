@@ -1,5 +1,6 @@
 body{
-    background-color: ghostwhite
+    background-color: ghostwhite;
+    /* max-width: 100%; */
 }
 .myHeader{
     background-color: red;

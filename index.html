@@ -14,7 +14,7 @@
     <div class="row justify-content-center">
     <ul class="list-item">
         <li class="list-inline-item"><i class="fa fa-book text-success fa-3x" aria-hidden="true"></i></li>
-        <li class="list-inline-item  text-uppercase font-weight-bold text-muted" style="font-size:30px">My Small library Application</li>
+        <li class="list-inline-item display-5  text-uppercase font-weight-bold text-muted n9" style="font-size:30px">My Small library Application</li>
        
     </ul>
 </div>
@@ -23,7 +23,7 @@
     
         <div class="row justify-content-center">
             <div class="card w-75 myCard">
-                <form action="" class="mx-3">
+                <form id="book-form" class="mx-3">
                     <div class="form-group">
                             <label for="Title" class="text-bold font-weight-bold">Title of the book</label>
                             <input type="text" width="200" class="form-control" id="Title" aria-describedby="emailHelp" placeholder="Enter Title">
@@ -42,47 +42,24 @@
                                 <label class="form-check-label" for="check">Check if you have read the book</label>
                               </div>
                           
-                          <button onclick="addBookToLibrary()" type="submit" id="add" class="btn-lg bg-warning btn-center font-weight-bold mb-2">Add Book To Library</button>
-                          <button onclick="" type="submit" id="delete" class="btn-lg bg-warning btn-center font-weight-bold mb-2">CANCEL</button>
+                          <button onclick="" type="submit" id="add" class="btn-lg bg-warning btn-center font-weight-bold mb-2">Add Book To Library</button>
+                          <button  type="submit" id="delete" class="btn-lg bg-warning btn-center font-weight-bold mb-2">CANCEL</button>
                         </form>
 <div class="mt-5 mx-3" >
-    <table class="table ">
+    <table class="table table-striped" id="table-id">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">TITLE</th>
                 <th scope="col">AUTHOR</th>
                 <th scope="col">PAGES</th>
-                <th scope="col">READ</th>
-                <th scope="col">REMOVE</th>
+                <!-- <th scope="col">READ</th> -->
+                
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td><button class="bg-warning bg-lg px-4"><i class="fa fa-trash  text-white" aria-hidden="true"></i></button> 
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Thornton</td>
-                <td><button class="bg-warning bg-lg px-4"><i class="fa fa-trash  text-white" aria-hidden="true"></i></button> 
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>the Bird</td>
-                <td><button class="bg-warning bg-lg px-4"><i class="fa fa-trash  text-white" aria-hidden="true"></i></button> 
-              </tr>
+        <tbody id="list-books">
+            
+            
         </tbody>
     </table>
 </div>
